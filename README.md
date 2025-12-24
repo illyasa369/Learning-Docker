@@ -2,5 +2,5 @@
 
 This repository contains material used to learn and master Docker.
 
-I have utilised active recall as my primary method for learning Docker and containers.
+I have utilised active recall as my primary method for learning some concepts.
 My quizlet link is https://quizlet.com/user/Illyas_Ahmed/folders/devops?tag=Docker
