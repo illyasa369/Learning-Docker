@@ -5,7 +5,7 @@ webApp = Flask(__name__)
 
 @webApp.route('/')
 def hello():
-    return 'Hello from a Docker container!'
+    return 'Hello from a Docker container!\n'
 
 
 if  __name__ == '__main__':
