@@ -7,9 +7,6 @@ Note:
 <br> 
 
 ```  yml
-# Docker Compose file format version
-version: "3.8"
-
 # Defines all containers that make up the application
 services:
 
