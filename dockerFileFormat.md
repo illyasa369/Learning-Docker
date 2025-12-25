@@ -1,4 +1,7 @@
-#### Note: 'Dockerfile' is the default name for docker files and is strongly recommended.
+Note:
+- 'Dockerfile' is the default name for Docker files and is strongly recommended.
+<br>
+
  ```
 # Choose the base image (usually a Linux image with a runtime installed)
 FROM <base-image>
