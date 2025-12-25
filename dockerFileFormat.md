@@ -1,5 +1,5 @@
-Note: 'Dockerfile' is the default name for docker files and is strongly recommended.
- 
+#### Note: 'Dockerfile' is the default name for docker files and is strongly recommended.
+ ```
 # Choose the base image (usually a Linux image with a runtime installed)
 FROM <base-image>
 
@@ -17,3 +17,4 @@ EXPOSE <port>
 
 # Define the default command to run when the container starts
 CMD ["executable", "arg1", "arg2"]
+```
