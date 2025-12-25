@@ -16,7 +16,7 @@ services:
   # First service definition
   service1:
 
-    # Build the image using a Dockerfile located in the specified directory
+    # Build the image using a Dockerfile located in the specified directory. Pre-built images can be used instead (see service2).
     build: /dir/of/Dockerfile
 
     # Map a port on the host machine to a port inside the container
@@ -30,5 +30,5 @@ services:
   # Second service definition
   service2:
     # Use a pre-built image instead of building one
-    image: another-image-name
+    image: image-name
 ```
