@@ -1,4 +1,4 @@
-##### Note: 'Dockerfile' is the default name for Docker files and is strongly recommended.<br><br>
+##### See below for more information on Dockerfiles.<br><br>
 
 ## Dockerfile format for a basic image build.
  ```
@@ -37,3 +37,17 @@ COPY --from=build <stage1-working-directory> <stage2-working-directory>
 EXPOSE <port>
 CMD ["executable", "arg1", "arg2"]
 ```
+[View multistage demo](demo-screenshots/04.multistageImageBuild.md)
+<br><br>
+
+## More on Docker files:
+- 'Dockerfile' is the default name for Docker files and is strongly recommended.
+
+- In Dockerfiles, the following four commands are required to build an image:
+  ```FROM```, ```COPY```, ```RUN```, ```CMD```
+
+- Utilising other commands in Dockerfiles is key to building secure, efficient, and predictable container images.
+
+- Not including ```WORKDIR``` means Docker uses the root directory (/) by default, which can lead to disorganized files and harder-to-maintain images.
+
+- It is best practice to use ```EXPOSE```, although it has no effect, it serves as documentation for which ports the container listens on.

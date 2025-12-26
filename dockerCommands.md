@@ -22,10 +22,10 @@ docker rmi -f image-name ||| Forcefully removes a Docker image.
 ## Container commands
 ```
 docker run image-name ||| Runs an image
-docker run -d --name container-name --network network-name -p localPort:containerPort image-name ||| -d tag runs the image in the background.
-                                                                                                 ||| -p allows the container's port to map to the host's port.
-                                                                                                 ||| --name allows the name of the container to be specified.
-                                                                                                 ||| --network specifies which network the container should be assigned to.
+docker run -d -it --name container-name --network network-name -p localPort:containerPort -v volume-name:/path/in/container image-name ||| -d tag runs the image in the background.
+         																														       ||| -it provides an interactive terminal from the container.
+docker exec [options] container-name/id <command> ||| Runs <command> in the running container specified.
+
 docker ps ||| Shows containers that are currently running.
 docker ps -a ||| Shows all containers (including stopped ones).
 
@@ -33,6 +33,19 @@ docker stop [containerID or name] ||| Stops a container.
 
 docker rm [containerID or name] ||| Removes a container.
 docker container prune ||| Removes all containers.
+```
+
+## Volume commands
+```
+docker volume create volume-name ||| Creates a volume.
+
+docker volume ls ||| Lists all Docker volumes.
+
+docker volume inspect volume-name ||| Shows volume information.
+
+docker volume rm volume-name ||| Removes the volume.
+
+docker volume prune ||| Removes unused volumes.
 ```
 
 ## Network commands

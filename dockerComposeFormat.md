@@ -24,8 +24,17 @@ services:
     depends_on:
       - service2
 
+    # This service uses volumes defined below.
+    volumes:
+      # Mount a named volume to a path inside the container. If the volume does not exist, it is created.
+      - volume-name:/path/in/container
+
   # Second service definition
   service2:
     # Use a pre-built image instead of building one
     image: image-name
-```
+
+# Define named volumes used by services
+volumes:
+  # Create a named volume with default settings
+  volume-name:
