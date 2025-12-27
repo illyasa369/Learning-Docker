@@ -1,8 +1,8 @@
 # This page defines the format for Docker compose files.
 
 Note:
-- File extension should be .yml
-- Images can be built with docker files (see service1) or pre-built images can be used (see service2).
+- Docker compose files should be named 'docker-compose.yml' as this is the file that is looked for when running docker compose.
+- Images can be built with Docker files (see service1) or pre-built images can be used (see service2).
 
 <br> 
 
