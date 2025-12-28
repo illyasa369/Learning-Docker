@@ -52,7 +52,7 @@ docker volume prune ||| Removes unused volumes.
 ```
 docker network create network-name ||| Creates a Docker network.
 
-docker network connect network-name container-name ||| Connects the specified container to the specified network.
+docker network connect network-name container-name ||| Connects the specified container to the selected network.
 
 docker network ls ||| Lists all Docker networks.
 
@@ -61,7 +61,8 @@ docker network rm network-name ||| Removes the specified network.
 
 ## Compose commands
 ```
-docker compose up -d ||| Starts all services defined in your docker-compose.yml in the background (due to -d tag).
+docker compose up -d --build ||| Starts all services defined in your docker-compose.yml in the background (due to -d tag).
+                             ||| ---build option rebuilds images of stopped containers.
 
 docker compose ps ||| Lists running containers from the Compose project.
 

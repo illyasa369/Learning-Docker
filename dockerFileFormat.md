@@ -50,4 +50,6 @@ CMD ["executable", "arg1", "arg2"]
 
 - Not including ```WORKDIR``` means Docker uses the root directory (/) by default, which can lead to disorganized files and harder-to-maintain images.
 
+- When installing system packages, use ```apt update && apt install -y package-name```.
+
 - It is best practice to use ```EXPOSE```, although it has no effect, it serves as documentation for which ports the container listens on.

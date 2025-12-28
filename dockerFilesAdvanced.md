@@ -64,7 +64,22 @@ ARG variable-name=value
 
 ### Volumes
 ```
-VOLUME ["/path"]
+VOLUME ["/dir/in/container"]
 ```
 - Creates a mount point for persistent or shared data in the container.
-- Keeps ```/app/data``` outside of the container so data persists even if the container is removed.
+<br>
+
+### Using a requirements.txt for Python dependencies
+
+```
+Flask
+redis
+numpy
+requests
+```
+- When installing required dependencies in Python containers, it is best practice to list the dependencies in a requirements.txt file so builds are reproducible, maintainable, and efficient.
+
+``` Dockerfile
+RUN pip install --no-cache-dir -r requirements.txt
+```
+- --no-cache-dir option prevents packages from being cached, keeping the image smaller.
