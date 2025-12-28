@@ -1,8 +1,12 @@
 from flask import Flask
 import redis
+import os
+
+rHost = os.environ.get("redis-host", "redisdb") # Gets the first string, second value acts as the default value if no rHost = os.environ.get("redis-host", "redisdb")  # Gets the value of "redis-host"; defaults to "redisdb" if not set
+rPort = os.environ.get("redis-port", 6379)
 
 app = Flask(__name__)
-r = redis.Redis(host="redisdb", port=6379, decode_responses=True)
+r = redis.Redis(host=rHost, port=rPort , decode_responses=True)
 
 r.set("sessionCount", 0)
 
