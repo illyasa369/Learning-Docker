@@ -4,4 +4,7 @@
 
 ## Bonus solution
 - Enabled persistent storage for the Redis server by configuring a Docker volume for the Redis container.
-<img width="1905" height="870" alt="Image" src="https://github.com/user-attachments/assets/5f13b1b7-f456-4566-977a-c155873a6e11" />
+- Used environment variables instead of hardcoding the Redis database details.
+- Added an NGINX container to allow load balancing between multiple web app containers.
+<img width="1887" height="985" alt="image" src="https://github.com/user-attachments/assets/d5c4868b-b351-4542-9259-a5667a1e158b" />
+

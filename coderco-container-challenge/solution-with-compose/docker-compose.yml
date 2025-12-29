@@ -2,8 +2,8 @@ services:
   webappflask:
     build: .
 
-    ports:
-      - "5000:5000"
+    expose:
+      - "5000"
 
     environment:
       redis-host: redisdb
@@ -14,8 +14,23 @@ services:
 
   redisdb:
     image: redis:alpine
+
     volumes:
       - redis-volume:/data
+
+  nginxlb:
+    image: nginx:1.29.4-alpine
+
+    ports:
+    - "5000:5000"
+
+    # Mapping nginx.conf to the same file in the container tells Docker to use the hosts' file instead of the default file.
+    # :ro means that the host file is read only and can not be changed by the container.
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
+    depends_on:
+      - webappflask
 
 volumes:
   redis-volume:
