@@ -48,7 +48,11 @@ CMD ["executable", "arg1", "arg2"]
 
 - Utilising other commands in Dockerfiles is key to building secure, efficient, and predictable container images.
 
-- Not including ```WORKDIR``` means Docker uses the root directory (/) by default, which can lead to disorganized files and harder-to-maintain images.
+- Not including ```WORKDIR``` means Docker uses the root directory (/) by default, which can lead to disorganized files and harder-to-maintain images.<br>
+
+- COPY can be used to replace files in the container with a host's version by mapping the specific file to the container's file.
+
+   ```COPY file.txt /app/file.txt```
 
 - When installing system packages, use ```apt update && apt install -y package-name```.
 

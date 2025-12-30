@@ -31,9 +31,22 @@ services:
 
   # Second service definition
   service2:
-    # Use a pre-built image instead of building one
+    # Use a pre-built image instead of building one.
     image: image-name
 
+    # Expose a port inside the container for internal communication.
+    # Not accessible by the host.
+    expose:
+      - "containerPort"
+
+    # Overwrites a file in the container with the version from the host machine.
+    volumes:
+      - ./file.txt:/app/file.txt
+
+    # Creates environment variables usable inside the container.
+    environment:
+      variable-name: value
+    
 # Define named volumes used by services
 volumes:
   # Create a named volume with default settings

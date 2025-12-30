@@ -61,8 +61,9 @@ docker network rm network-name ||| Removes the specified network.
 
 ## Compose commands
 ```
-docker compose up -d --build ||| Starts all services defined in your docker-compose.yml in the background (due to -d tag).
-                             ||| ---build option rebuilds images of stopped containers.
+docker compose up -d --build --scale service=n ||| Starts all services defined in your docker-compose.yml in the background (due to -d tag).
+                                                      ||| ---build option rebuilds images of stopped containers.
+                                                      ||| --scale runs n instances of the specified service. 
 
 docker compose ps ||| Lists running containers from the Compose project.
 

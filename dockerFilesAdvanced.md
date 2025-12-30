@@ -53,6 +53,7 @@ ENV variable-name=value
 ```
 - Sets an environment variable for the container.
 - Can be accessed by the container or program.
+- It is encouraged to use environment variables instead of hardcoding values.
 <br>
 
 ### Build-time variables
